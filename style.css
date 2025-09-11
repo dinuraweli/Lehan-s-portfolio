@@ -398,6 +398,127 @@ header.scrolled a{
   }
 }
 
+/* resume section 2 */
 
+.resume h1{
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
 
+.resume .subtitle {
+  text-align: center;
+  color: #ff004f;
+  margin-bottom: 40px;
+}
+
+.resume-container {
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+
+/* vetical line in middle */
+
+.resume-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+}
+
+.resume-column {
+  flex: 1;
+}
+
+.resume-column h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ff004f;
+}
+
+.resume-item{
+  position: relative;
+  background: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.resume-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Timeline dots */
+.resume-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff004f;
+  border: 2px solid #fff;
+}
+
+/* Left column dots */
+.resume-column:first-child .resume-item::before {
+  right: -46px;
+}
+
+/* Right column dots */
+.resume-column:last-child .resume-item::before {
+  left: -46px;
+}
+
+/* Item content */
+.resume-item .year {
+  font-weight: bold;
+  color: #ff004f;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.resume-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.resume-item .institution {
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.resume-item .badge {
+  display: inline-block;
+  background: #ff004f;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Responsive Layout */
+@media(max-width: 900px) {
+  .resume-container {
+    flex-direction: column;
+  }
+
+  .resume-container::before {
+    left: 20px;
+  }
+
+  .resume-column .resume-item::before {
+    left: -30px;
+    right: auto;
+  }
+}
 
