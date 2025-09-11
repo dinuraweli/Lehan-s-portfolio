@@ -6,15 +6,12 @@
     
 }
 
-
-
 /* Typography */
 body {
   font-family: 'Trebuchet MS', sans-serif;
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
-  margin: 10px;
   background-color: #242730;
 }
 
@@ -27,9 +24,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(12, 12, 99);
+    background: rgba(12, 12, 99, 0);
     z-index: 1000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
 }
 
 header.scrolled {
@@ -56,16 +54,15 @@ header.scrolled a{
 
 .hero {
   /*background: url('images/logo.jpg') no-repeat center center/cover;*/
-  background-color: #242730;
+  background-color: #c18a1d;
   height: 80vh;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: left;
   padding: 0 20px;
   flex-wrap: wrap;
-  border-bottom: solid black;
+  border: solid rgb(203, 27, 27);
   /*background: linear-gradient(135deg, #4b0082, #5c5cff);
   background-image: url('assets/abstract-tech-bg.svg'); /* or PNG
   background-size: cover;
@@ -78,6 +75,12 @@ header.scrolled a{
 
 .hero span {
   color: #2563eb;
+}
+
+.hero p{
+  color: white;
+  border: solid red;
+  width: 800px;
 }
 
 .profile-pic {
